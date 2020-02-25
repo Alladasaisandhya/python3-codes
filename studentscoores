@@ -1,0 +1,14 @@
+x=input().split(",")
+y=input().split(",")
+d={}
+s=[float(y[i]) for i in range(len(y))]
+#print(s)
+for i in range(len(x)):
+    d[x[i]]=s[i]
+#print(d)
+d=sorted(d.items())
+#print(d)
+d=sorted(d,key=lambda x:x[1],reverse=True)
+#d=sorted(d,key=lambda x:x[0],reverse=False)
+print(d)
+print(help(list))
