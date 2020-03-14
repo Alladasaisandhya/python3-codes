@@ -1,0 +1,11 @@
+import datetime
+def convert(v):
+    d=datetime.datetime.strptime(v,'%a %d %b %Y %H:%M:%S %z')
+    return d
+n=int(input())
+for i in range(n):
+    x=input()
+    y=input()
+    s=convert(x)-convert(y)
+    p=s.total_seconds()
+    print(int(p))
