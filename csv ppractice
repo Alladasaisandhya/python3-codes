@@ -1,0 +1,10 @@
+import csv
+with open('python/names.csv') as f:
+    reader=csv.DictReader(f)
+    marks=[dict(row) for row in reader]
+    print(marks)
+
+sai,linear,73
+sandhya,science,20
+swetha,physics,30
+kavya,biology,60
