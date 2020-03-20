@@ -1,0 +1,16 @@
+import csv
+with open('python/names.csv') as f:
+    reader=csv.DictReader(f)
+    marks=[dict(row) for row in reader]
+    print(marks)
+for user_score in marks:
+    if float(user_score['scores'])>=30:
+        user_score['Grade']='A'
+    else:
+        user_score['Grade']='F'
+    user_score.pop('scores')
+with open('python/new_names.csv','w') as f:
+    fieldnames=['name','subject','Grade']
+    writer=csv.DictWriter(f,fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(marks)  
