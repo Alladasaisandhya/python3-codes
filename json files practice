@@ -1,0 +1,29 @@
+import json
+with open('python/gggg/sss.json') as f:
+    sss=json.load(f)
+for i in range(len(sss)):
+    ext=sss[i]['extension']
+    sss[i]['file_name']="main{}".format(ext)
+    print(sss)
+with open ('python/gggg/sss.json','w') as f:
+    json.dump(sss,f,indent=6)
+    
+    
+    
+    
+    
+    
+    
+    [
+      {
+            "languages": "python",
+            "extension": ".py",
+            "file_name": "main.py"
+      },
+      {
+            "languages": "c",
+            "extension": ".c",
+            "file_name": "main.c"
+      }
+]
+    
